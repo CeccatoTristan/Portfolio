@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" />
+        <title>Portfolio</title>
+        <h1 id="title1"> Bienvenue sur mon Portfolio </h1>
+
+    </head>
+
+    <body id="night">
+
+    	<p id="intro"> 
+			Je m'apelle <em> Tristan Ceccato et voici mon portfolio </em> <br />
+			<img src="/Users/invi-etu02/Downloads/portfolio.jpeg" /> 
+		</p>
+
+
+		<p> <h2 class="title2"> Mes études </h2>
+			<ol>
+				<li>J'ai obtenu un bac <strong>STI2D SIN</strong> (Système d'Information et Numérique), ce qui m'as permit de faire mes premiers pas dans le monde de l'informatique </li><br />
+
+				<li>Puis j'ai effectuer un <strong>BTS SNIR</strong> (Systèmes Numériques option informatique et réseaux), j'ai put approfondir mes connaisances et me pencher aussi sur tous le coté reseaux de l'informatique   </li><br />
+
+				<li>Finalement je suis en <strong>LP SMIN</strong> (Services Mobiles et Interface Nomade), pour appronfondir mes connaisances web et me spécialisé dans la programmation mobile		</li><br />
+
+			</ol>
+		</p> 
+
+
+		<p> <h2 class="title2">Mes expériences professionels</h2>
+			<ul>
+				<li>Ma premiere experience est plutot amateur mais durant ma terminal avec 2 amis nous avons traduit en francais un petit jeu de simulateur de youtubeur, une experience agréable qui m'as permis de perfectionner mon niveau d'anglais que j'aimerais reproduire dans le futur  </li><br />
+
+				<li>Ma seconde expérience est un stage de 7 semaines dans une start-up nommée MooveNow qui a pour produit principal une application mobile qui mélange sport et social, mon role était de créer différent Dashboard.
+					
+				</li>
+			</ul>
+
+			
+		</p>
+
+		<div id="buttonTest" class="buttonNight" onclick="goNight();"> 
+			
+				<button  type="button" >Nuit</button>
+	
+		</div>
+
+		<script> 
+
+			function goNight() {
+			body = document.getElementById("night");
+			li = document.getElementsByTagName("li");
+			h1 = document.getElementById("title1");
+			h2 = document.getElementsByTagName("h2");
+			p1 = document.getElementById("intro");
+			if (body.classList.contains("nightOn")) {
+				body.classList.remove("nightOn");
+				p1.classList.remove("colored");
+				h1.setAttribute("class","");
+				//h2.setAttribute("class","");
+				for (var i=0; i<li.length; i++) {
+					li[i].setAttribute("class","");
+	
+				}
+
+				for (var i=0; i<h2.length; i++) {
+					h2[i].setAttribute("class","");
+	
+				}
+
+
+			}
+			else {
+				body.classList.add("nightOn");
+				p1.classList.add("colored");
+				h1.classList.add("colored"); 
+			//	h2.classList.add("colored")[0];
+				for (var i=0; i<li.length; i++) {
+					li[i].setAttribute("class","colored");	
+				}
+
+				for (var i=0; i<h2.length; i++) {
+					h2[i].setAttribute("class","colored");	
+				}
+				 
+			}
+ 
+			
+		}
+		</script>
+
+
+
+
+
+    </body>
+</html>
